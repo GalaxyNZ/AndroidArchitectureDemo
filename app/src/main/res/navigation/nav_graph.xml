@@ -18,7 +18,7 @@
         <argument
             android:name="username"
             app:argType="string"
-            android:defaultValue="@null" />
+            android:defaultValue="" />
     </fragment>
     <action android:id="@+id/action_global_authenticatedFragment" app:destination="@id/authenticatedFragment" />
 </navigation>
