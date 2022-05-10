@@ -14,9 +14,7 @@ abstract class BaseViewModel: ViewModel() {
     val navigation: LiveData<Event<NavigationCommand>> get() = _navigation
 
     fun navigate(navDirections: NavDirections) {
-        Log.d("BaseViewModel", "attempting navigation")
         _navigation.value = Event(NavigationCommand.ToDirection(navDirections))
-        Log.d("BaseViewModel", "navigation success?")
     }
 
     fun navigateBack() {

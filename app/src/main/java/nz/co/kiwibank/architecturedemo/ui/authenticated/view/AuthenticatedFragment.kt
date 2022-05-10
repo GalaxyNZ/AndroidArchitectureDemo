@@ -1,5 +1,6 @@
 package nz.co.kiwibank.architecturedemo.ui.authenticated.view
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,6 +26,7 @@ class AuthenticatedFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -32,6 +34,6 @@ class AuthenticatedFragment : Fragment() {
             this.findNavController().navigateUp()
         }
 
-        binding.textView.text = args.username
+        binding.textView.text = "${args.username} - ${args.password}"
     }
 }
